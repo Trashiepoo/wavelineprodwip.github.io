@@ -1,5 +1,7 @@
+@use "fonts";
+
 *{
-    font-family: "oswald", sans-serif;
+    font-family: "arial", sans-serif;
     box-sizing: border-box;
 }
   
@@ -7,4 +9,14 @@ body{
     font-size: 1rem;
     margin: 0rem;
     padding: 0rem;
+}
+
+h1{
+    font-feature-settings: fonts.$fontHeader;
+}
+
+p{
+    a{
+        font-family: fonts.$fontText;
+    }
 }
