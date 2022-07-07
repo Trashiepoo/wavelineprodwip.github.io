@@ -1,21 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mukta&display=swap");
-* {
-  font-family: "arial", sans-serif;
-  box-sizing: border-box;
-}
+/* Error: There is no module with the namespace "fonts".
+ *    ,
+ * 13 |     font-feature-settings: fonts.$fontHeader;
+ *    |                            ^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass\main.scss 13:28  root stylesheet */
 
-body {
-  font-size: 1rem;
-  margin: 0rem;
-  padding: 0rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "fonts".\a    \2577 \a 13 \2502      font-feature-settings: fonts.$fontHeader;\d\a    \2502                             ^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\main.scss 13:28  root stylesheet';
 }
-
-h1 {
-  font-feature-settings: "Kaushan Script", cursive;
-}
-
-p a {
-  font-family: "Mukta", sans-serif;
-}
-
-/*# sourceMappingURL=styles.css.map */
