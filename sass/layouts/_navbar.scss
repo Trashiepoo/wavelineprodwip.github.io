@@ -1,48 +1,112 @@
+@use "../abstracts/mixins";
+
 //Mobile
-li{
-    a{
-        button{
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: #edf0f1;
-            text-decoration: none;
-        }
-    }
+.logo{
+    max-width: 100%;
+    height: 5em;
+    margin: 0px;
 }
 
 header{
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.nav-toggle{
+    display:none;
+}
+
+.nav-toggle-label{
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 30px 10%;
-	background-color: #242424;
 }
 
-.logo{
-    max-width: 100%; 
-    padding-right: 25px;
-    height: 75px;
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position:relative;
 }
 
-.nav-links{
-    list-style: none;
+.nav-toggle-label span::before, .nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+
 }
 
-.nav-links{
-    li{
-        display: inline-block;
-        padding: 0px 50px;
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background:black;
+    width: 100%;
+
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav{
+    ul{
+        margin:0;
+        padding: 0;
+        list-style: none;
     }
 }
 
-.nav-links{
+nav{
     li{
-        a{
-            transition: all 0.3s ease 0s;
-            &:hover{
-                color: #00b490;
-            }
+        margin-bottom: 1em;
+        margin-left:1em;
+    }
+}
+
+nav{
+    a{
+    color: lightblue;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    &:hover{
+            color:darkblue;
         }
     }
 }
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 769px){
+    .nav-toggle-label{
+        display: none;
+    }
+}
+
