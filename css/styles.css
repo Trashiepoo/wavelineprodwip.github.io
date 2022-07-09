@@ -2,9 +2,6 @@
 * {
   font-family: "Mukta", sans-serif;
   box-sizing: border-box;
-}
-
-body {
   font-size: 1rem;
   margin: 0rem;
   padding: 0rem;
@@ -19,7 +16,7 @@ body {
 header {
   background-color: black;
   text-align: center;
-  position: fixed;
+  position: sticky;
   z-index: 999;
   width: 100%;
 }
@@ -40,7 +37,7 @@ header {
 
 .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
   display: block;
-  background: white;
+  background: lightblue;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -109,9 +106,39 @@ nav a:hover {
     display: none;
   }
 }
+/*$breakpoints: (
+    mobile: 26.625em,
+    tablet: 48.0625em,
+    laptop: 90.0625em,
+    UHD: 160.0625em
+) !default;*/
 /*
 font-family: 'Kaushan Script', cursive;
 font-family: 'Mukta', sans-serif;
 */
+@media screen and (max-width: 426px) {
+  h1, h2 {
+    display: flex;
+    flex-direction: column;
+    color: lightblue;
+    position: absolute;
+    text-align: center;
+    left: 6.35em;
+    top: 13em;
+  }
+  .landingimage-behindlogo {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(70%) blur(3px);
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    font-color: black;
+    background-color: yellow;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
