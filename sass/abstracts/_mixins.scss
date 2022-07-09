@@ -1,4 +1,4 @@
-@mixin respond-to($breakpoint) {
+/*@mixin respond-to($breakpoint) {
     // If the key exists in the map
     @if map-has-key($breakpoints, $breakpoint) {
       // Prints a media query based on the value
@@ -11,4 +11,4 @@
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
             + "Available breakpoints are: #{map-keys($breakpoints)}.";
       }
-    }
+    }*/
