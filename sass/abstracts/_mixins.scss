@@ -1,7 +1,9 @@
+@use "../components/colors";
+
 @mixin landingtext-style{
   display:flex;
   flex-direction: column;
-  color: lightblue;
+  color: colors.$accent-color;
   position:absolute;
   text-align: center;
   left: 6.35em;
@@ -9,12 +11,12 @@
 }
 
 @mixin blur-image{
-  filter: brightness(70%) blur(3px);
+  filter: brightness(50%) blur(3px);
 }
 
 @mixin test{
   display:flex;
 flex-direction: column;
-font-color: black;
-background-color: yellow;
+font-color: #1e272e;
+background-color: #ffdd59;
 }

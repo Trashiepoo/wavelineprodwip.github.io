@@ -1,4 +1,4 @@
-//@use "../abstracts/mixins";
+@use "../components/colors";
 
 //Mobile
 .logo{
@@ -8,7 +8,7 @@
 }
 
 header{
-    background-color: black;
+    background-color: colors.$primary-color;
     text-align: center;
     position: sticky;
     z-index: 999;
@@ -31,7 +31,7 @@ header{
 
 .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after{
     display: block;
-    background: lightblue;
+    background: colors.$accent-color;
     height: 2px;
     width: 2em;
     border-radius: 2px;
@@ -57,7 +57,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0;
-    background:black;
+    background:colors.$primary-color;
     width: 100%;
 
     transform: scale(1,0);
@@ -82,7 +82,7 @@ nav{
 
 nav{
     a{
-    color: lightblue;
+    color: colors.$accent-color;
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -90,7 +90,7 @@ nav{
     opacity: 0;
     transition: opacity 150ms ease-in-out;
     &:hover{
-            color:darkblue;
+            color: colors.$buttons-hover-color;
         }
     }
 }
