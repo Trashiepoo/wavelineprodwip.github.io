@@ -1,15 +1,16 @@
-@use "./base";
-@use "./base/override-styles";
-@use "./layouts";
-@use "./layouts/navbar";
 @use "./abstracts";
 @use "./abstracts/mixins";
+@use "./base";
+@use "./base/override-styles";
 @use "./components";
 @use "./components/fonts";
+@use "./components/colors";
+@use "./layouts";
+@use "./layouts/navbar";
 
 //Mobile
 @media screen and (max-width: 426px){
-    h1, h2{
+    h1{
         @include mixins.landingtext-style;
     }
 

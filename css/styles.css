@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mukta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mukta&display=swap"); /*$breakpoints: (
+    mobile: 26.625em,
+    tablet: 48.0625em,
+    laptop: 90.0625em,
+    UHD: 160.0625em
+) !default;*/
 * {
   font-family: "Mukta", sans-serif;
   box-sizing: border-box;
@@ -7,6 +12,14 @@
   padding: 0rem;
 }
 
+body {
+  background-color: #1e272e;
+}
+
+/*
+font-family: 'Kaushan Script', cursive;
+font-family: 'Mukta', sans-serif;
+*/
 .logo {
   max-width: 100%;
   height: 5em;
@@ -14,7 +27,7 @@
 }
 
 header {
-  background-color: black;
+  background-color: #1e272e;
   text-align: center;
   position: sticky;
   z-index: 999;
@@ -37,7 +50,7 @@ header {
 
 .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
   display: block;
-  background: lightblue;
+  background: #0fbcf9;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -62,7 +75,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: black;
+  background: #1e272e;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -81,7 +94,7 @@ nav li {
 }
 
 nav a {
-  color: lightblue;
+  color: #0fbcf9;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -89,7 +102,7 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 nav a:hover {
-  color: darkblue;
+  color: #4bcffa;
 }
 
 .nav-toggle:checked ~ nav {
@@ -106,21 +119,11 @@ nav a:hover {
     display: none;
   }
 }
-/*$breakpoints: (
-    mobile: 26.625em,
-    tablet: 48.0625em,
-    laptop: 90.0625em,
-    UHD: 160.0625em
-) !default;*/
-/*
-font-family: 'Kaushan Script', cursive;
-font-family: 'Mukta', sans-serif;
-*/
 @media screen and (max-width: 426px) {
-  h1, h2 {
+  h1 {
     display: flex;
     flex-direction: column;
-    color: lightblue;
+    color: #0fbcf9;
     position: absolute;
     text-align: center;
     left: 6.35em;
@@ -131,13 +134,13 @@ font-family: 'Mukta', sans-serif;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(70%) blur(3px);
+    filter: brightness(50%) blur(3px);
   }
   p {
     display: flex;
     flex-direction: column;
-    font-color: black;
-    background-color: yellow;
+    font-color: #1e272e;
+    background-color: #ffdd59;
   }
 }
 
