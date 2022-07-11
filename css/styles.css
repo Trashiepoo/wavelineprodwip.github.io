@@ -22,7 +22,7 @@ font-family: 'Mukta', sans-serif;
 */
 .logo {
   max-width: 100%;
-  height: 5em;
+  height: 3em;
   margin: 0px;
 }
 
@@ -126,8 +126,10 @@ nav a:hover {
     color: #0fbcf9;
     position: absolute;
     text-align: center;
-    left: 6.35em;
-    top: 13em;
+    top: 7em;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 1.5em;
   }
   .landingimage-behindlogo {
     height: 50vh;
@@ -142,6 +144,12 @@ nav a:hover {
     font-color: #1e272e;
     background-color: #ffdd59;
   }
+}
+h2 {
+  background-color: #0fbcf9;
+  color: #1e272e;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

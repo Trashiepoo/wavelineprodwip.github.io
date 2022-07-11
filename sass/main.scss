@@ -12,6 +12,7 @@
 @media screen and (max-width: 426px){
     h1{
         @include mixins.landingtext-style;
+        font-size: 1.5em;
     }
 
     .landingimage-behindlogo{
@@ -24,4 +25,11 @@
     p{
         @include mixins.test;
     }
+}
+
+h2{
+    background-color: colors.$accent-color;
+    color: colors.$primary-color;
+    text-align: center;
+    font-size: 1.5em;
 }

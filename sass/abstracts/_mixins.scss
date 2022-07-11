@@ -6,8 +6,9 @@
   color: colors.$accent-color;
   position:absolute;
   text-align: center;
-  left: 6.35em;
-  top:  13em;
+  top:  7em;
+  white-space: nowrap;
+  width: 100%;
 }
 
 @mixin blur-image{
