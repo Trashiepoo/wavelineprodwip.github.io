@@ -18,9 +18,19 @@
         object-position: center;
         position: absolute;
         @include mixins.blur-image;
+
+        animation: fadeIn 500ms ease;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+    }
+    body :not(.landingimage){
+        position: relative;
     }
     h1, h2{
-        position: relative;
         text-align: center;
         padding: 1em;
         width: 100%;
@@ -34,4 +44,30 @@
         top: 13em;
         font-size: 1em;
     }
+    .landingtext{
+        animation: fadeIn 2s;
+    }
+    .emailinfo{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        top: 30em;
+        
+        animation: fadeIn 2s;
+      }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+    .emaillink{
+        color: white;
+        text-decoration: none;
+        font-size: 0.7em;
+    }
+    .landpage-icons-email{
+        height: 100%;
+        width: 5vw;
+        margin-right: 0.3em;
+      }
+
 }
