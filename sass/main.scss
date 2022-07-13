@@ -8,28 +8,30 @@
 @use "./layouts";
 @use "./layouts/navbar";
 
+
 //Mobile
 @media screen and (max-width: 426px){
-    h1{
-        @include mixins.landingtext-style;
-        font-size: 1.5em;
-    }
-
-    .landingimage-behindlogo{
-        height: 50vh;
+    .landingimage{
+        height: 100vh;
         width: 100%;
         object-fit: cover;
         object-position: center;
+        position: absolute;
         @include mixins.blur-image;
     }
-    p{
-        @include mixins.test;
+    h1, h2{
+        position: relative;
+        text-align: center;
+        padding: 1em;
+        width: 100%;
+        color: white;
     }
-}
-
-h2{
-    background-color: colors.$accent-color;
-    color: colors.$primary-color;
-    text-align: center;
-    font-size: 1.5em;
+    h1{
+        top: 9.5em;
+        font-size: 1.6em;
+    }
+    h2{
+        top: 13em;
+        font-size: 1em;
+    }
 }
