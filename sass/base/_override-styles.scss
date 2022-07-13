@@ -1,7 +1,7 @@
 @use "../components/colors";
 
 *{
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     font-size: 1rem;
     margin: 0rem;
@@ -9,5 +9,5 @@
 }
 
 body{
-    background-color: colors.$primary-color;
+    background-color: colors.$accent-color;
 }
