@@ -1,5 +1,5 @@
 @use "../components/colors";
-
+/*
 @mixin landingtext-style{
   display:flex;
   flex-direction: column;
@@ -10,14 +10,17 @@
   white-space: nowrap;
   width: 100%;
 }
+*/
 
 @mixin blur-image{
   filter: brightness(50%) blur(3px);
 }
 
+/*
 @mixin test{
   display:flex;
 flex-direction: column;
 font-color: #1e272e;
 background-color: #ffdd59;
 }
+*/
