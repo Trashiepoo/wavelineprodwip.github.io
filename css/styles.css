@@ -5,10 +5,10 @@ font-family: 'Noto Sans JP', sans-serif;
 */
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mukta&family=Noto+Sans+JP&display=swap");
 /*$breakpoints: (
-    mobile: 26.625em,
-    tablet: 48.0625em,
-    laptop: 90.0625em,
-    UHD: 160.0625em
+    mobile: 26.625em, 426px
+    tablet: 48.0625em, 769px
+    laptop: 90.0625em, 1440px
+    UHD: 160.0625em 2561px
 ) !default;*/
 /*
 @mixin landingtext-style{
@@ -153,7 +153,7 @@ nav{
     }
 }
 */
-@media screen and (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .landingimage {
     height: 100vh;
     width: 100%;
@@ -206,6 +206,9 @@ nav{
     top: 30em;
   }
   .emaillink {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     color: white;
     text-decoration: none;
     font-size: 0.7em;
@@ -222,6 +225,89 @@ nav{
     align-items: baseline;
     top: 25em;
     gap: 50px;
+  }
+  .landpage-socialicons-blog, .landpage-socialicons-youtube {
+    height: 100%;
+    width: 6vw;
+  }
+  .landpage-socialicons-home {
+    height: 100%;
+    width: 8vw;
+  }
+}
+/* fix icons at 767px mark */
+@media (min-width: 481px) and (max-width: 767px) {
+  .landingimage {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    filter: brightness(50%) blur(8px);
+    animation: fadeIn 500ms ease;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  body :not(.landingimage) {
+    position: relative;
+  }
+  h1, h2 {
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    color: white;
+  }
+  h1 {
+    top: 7.5em;
+    font-size: 2em;
+  }
+  h2 {
+    top: 8.5em;
+    font-size: 1.5em;
+  }
+  .landingpage-animations {
+    animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .emailinfo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    top: 27em;
+  }
+  .emaillink {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+  .landpage-icons-email {
+    height: 100%;
+    width: 4.5vw;
+    margin-right: 0.5em;
+  }
+  .socialicons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    top: 22em;
+    gap: 60px;
   }
   .landpage-socialicons-blog, .landpage-socialicons-youtube {
     height: 100%;

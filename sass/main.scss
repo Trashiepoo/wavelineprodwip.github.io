@@ -10,7 +10,7 @@
 
 
 //Mobile
-@media screen and (max-width: 426px){
+@media (min-width: 320px) and (max-width: 480px) {
     //landing page iamge
     .landingimage{
         height: 100vh;
@@ -63,9 +63,12 @@
         top: 30em;
       }
     .emaillink{
-        color: white;
-        text-decoration: none;
-        font-size: 0.7em;
+      display:flex;
+      justify-content: center;
+      align-self: center;
+      color: white;
+      text-decoration: none;
+      font-size: 0.7em;
     }
     .landpage-icons-email{
         height: 100%;
@@ -90,4 +93,91 @@
         height: 100%;
         width: 8vw;
       }
+}
+
+/* fix icons at 767px mark */
+//tablet
+@media (min-width: 481px) and (max-width: 767px) {
+    //landing page iamge
+    .landingimage{
+      height: 100vh;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      @include mixins.blur-image;
+
+      animation: fadeIn 500ms ease;
+
+      @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
+      
+  }
+  //body
+  body :not(.landingimage){
+      position: relative;
+  }
+  h1, h2{
+      text-align: center;
+      padding: 1em;
+      width: 100%;
+      color: white;
+  }
+  h1{
+      top: 7.5em;
+      font-size: 2em;
+  }
+  h2{
+      top: 8.5em;
+      font-size: 1.5em;
+  }
+  //animations
+  .landingpage-animations{
+      animation: fadeIn 2s;
+
+      @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
+  }
+  //bottom of page - email
+  .emailinfo{
+      display:flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      top: 27em;
+    }
+  .emaillink{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+  .landpage-icons-email{
+      height: 100%;
+      width: 4.5vw;
+      margin-right: 0.5em;
+    }
+  //bottom of page - social buttons
+    .socialicons{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      top: 22em;
+
+      gap:60px;
+    }
+    .landpage-socialicons-blog, .landpage-socialicons-youtube{
+      height: 100%;
+      width: 6vw;
+    }
+    .landpage-socialicons-home{
+      height: 100%;
+      width: 8vw;
+    }
 }
