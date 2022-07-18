@@ -8,6 +8,23 @@
 @use "./layouts";
 @use "./layouts/navbar";
 
+//main /* organize to sass partials and variables*/
+
+//body
+body :not(.landingimage){
+  position: relative;
+}
+
+
+
+//animations
+.landingpage-animations{
+  animation: fadeIn 2s;
+  @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+}
 
 //Mobile
 @media (min-width: 320px) and (max-width: 480px) {
@@ -28,10 +45,6 @@
         }
         
     }
-    //body
-    body :not(.landingimage){
-        position: relative;
-    }
     h1, h2{
         text-align: center;
         padding: 1em;
@@ -45,15 +58,6 @@
     h2{
         top: 13em;
         font-size: 1em;
-    }
-    //animations
-    .landingpage-animations{
-        animation: fadeIn 2s;
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
     }
     //bottom of page - email
     .emailinfo{

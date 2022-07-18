@@ -153,6 +153,22 @@ nav{
     }
 }
 */
+body :not(.landingimage) {
+  position: relative;
+}
+
+.landingpage-animations {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .landingimage {
     height: 100vh;
@@ -171,9 +187,6 @@ nav{
       opacity: 1;
     }
   }
-  body :not(.landingimage) {
-    position: relative;
-  }
   h1, h2 {
     text-align: center;
     padding: 1em;
@@ -187,17 +200,6 @@ nav{
   h2 {
     top: 13em;
     font-size: 1em;
-  }
-  .landingpage-animations {
-    animation: fadeIn 2s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
   .emailinfo {
     display: flex;
