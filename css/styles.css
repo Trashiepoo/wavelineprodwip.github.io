@@ -204,7 +204,7 @@ body :not(.landingimage) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    top: 35em;
+    top: 30em;
   }
   .emaillink {
     display: flex;
@@ -224,7 +224,7 @@ body :not(.landingimage) {
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
-    top: 30em;
+    top: 25em;
     gap: 50px;
   }
   .landpage-socialicons-blog, .landpage-socialicons-youtube {
@@ -286,7 +286,7 @@ body :not(.landingimage) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    top: 35em;
+    top: 32em;
   }
   .emaillink {
     display: flex;
@@ -307,7 +307,7 @@ body :not(.landingimage) {
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
-    top: 28em;
+    top: 24em;
     gap: 60px;
   }
   .landpage-socialicons-blog, .landpage-socialicons-youtube {
